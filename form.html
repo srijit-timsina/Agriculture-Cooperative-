@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Agriculture Cooperative</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <nav>
+        <div class="logo">अनवरत कृषि सहकारी संस्था लि.<i></div>
+        <i class="fa fa-bars menu-toggle"></i>
+        <ul>
+            <li><a href="index.html"style="color:white;"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="index.html"style="color:white;"><i class="fa-solid fa-cheese"></i> Services</li>
+            <li><a href="form.html"style="color:white;"><i class="fa-solid fa-cart-shopping"></i> Order</a></li>
+            
+        </ul>
+        <div class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"> </i>Home</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-cheese"></i> Services</li>
+                <li><a href="form.html"><i class="fa-solid fa-cart-shopping"> </i>Order</a></li>
+        </div>
+    </nav>
+
+    
+       <!-- Order Form Section -->
+       <div class="container form-container" id="order">
+        <i class="fa-solid fa-fire"></i> Beta Version</i>
+        <form action="https://api.web3forms.com/submit" method="POST" class="form">
+            <div class="form-header">
+                <h2>Book Your Order</h2>
+                <p>Please fill out the form below to place your order. For items not listed, please specify in the 'Others' section.</p>
+            </div>
+            <input type="hidden" name="access_key" value="07b28757-9fbb-4d57-884e-800df8ed030e">
+
+            <div class="form-element">
+                <input type="text" name="name" placeholder="Your Name" class="inputs" required>
+            </div>
+            <div class="form-element">
+                <input type="text" name="address" placeholder="Address" class="inputs" required>
+            </div>
+            <div class="form-element">
+                <input type="number" name="number" placeholder="Phone Number" class="inputs" required>
+            </div>
+
+            <div class="form-element checkbox">
+                <h4>Select Products:</h4>
+                <div class="checkbox-item">
+                    <input type="checkbox" name="seeds">
+                    <label for="seeds">Seeds</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" name="dairy product">
+                    <label for="dairy product">Dairy Products</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" name="fertilizers">
+                    <label for="fertilizers">Fertilizers</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" name="others">
+                    <label for="others">Others</label>
+                </div>
+            </div>
+
+            <div class="form-element">
+                <input type="number" name="quantity" placeholder="Quantity" class="inputs" required>
+            </div>
+
+            <div class="form-element">
+                <textarea name="message" placeholder="Additional details or product description" class="texta" required></textarea>
+            </div>
+
+            <div class="button">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <p>© 2024 Agriculture Cooperative. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100086281730063"><i class="fab fa-facebook-f"></i></a>
+                
+            </div>
+        </div>
+</footer>
+
+  <!---->  <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
+

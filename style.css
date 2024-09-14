@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F4F4F9;
+    color: #333;
+    font-size: 16px;
+}
+
+
+/* Order Form */
+.form-container {
+    background-color: #fff;
+    padding: 50px 30px;
+    max-width: 700px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header h2 {
+    font-size: 28px;
+    color: #2F855A;
+    text-align: center;
+}
+
+.form-header p {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 0 30px;
+}
+
+.form-element {
+    margin-bottom: 20px;
+}
+
+.inputs, .texta {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.inputs:focus, .texta:focus {
+    border-color: #2F855A;
+    outline: none;
+}
+
+.texta {
+    resize: vertical;
+    height: 120px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.checkbox-item input {
+    margin-right: 10px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.button {
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: #2F855A;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #276749;
+}
+
+/* Footer */
+footer {
+    background-color: #2F855A;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #ddd;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #123344;
+    color: white;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: #FFA500;
+}
+
+nav .menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsive Dropdown Menu */
+.menu {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 100vw;
+    height: ;
+    background-color: #2F855A;
+    color: white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    list-style: none;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu.active {
+    display: flex;
+}
+
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:#2F855A;
+    color: white;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+    color: #FFA500;
+}
+
+nav .menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .menu-toggle {
+        display: block;
+    }
+
+   
+}

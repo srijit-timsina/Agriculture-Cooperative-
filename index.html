@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperative Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F3F6F9;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #2F855A;
+            color: white;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            
+        }
+
+        nav ul li:hover {
+            color: #FFA500;
+        }
+
+        nav .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Dropdown Menu */
+        .menu {
+            position: absolute;
+            right: 0;
+            top: 60px;
+            width: 100vw;
+            height: ;
+            background-color: #2F855A;
+            color: white;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            list-style: none;
+        }
+
+        .menu li {
+            margin: 20px 0;
+            
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .menu.active {
+            display: flex;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .left {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .left h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .left p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .image {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .box {
+            background-color: #FFF;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+        }
+
+        .box h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .box p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .box button {
+            background-color: #2F855A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .box button:hover {
+            background-color: #FFA500;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            nav .menu-toggle {
+                display: block;
+            }
+
+            .box-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Footer */
+footer {
+    background-color: #2F855A;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #ddd;
+}
+
+    </style>
+</head>
+
+<body>
+   
+    <nav>
+        <div class="logo">अनवरत कृषि सहकारी संस्था लि.</div>
+        <i class="fa fa-bars menu-toggle"></i>
+        <ul>
+            <li><a href="index.html"style="color:white;"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#ser"style="color:white;"><i class="fa-solid fa-cheese"></i> Services</li>
+            <li><a href="form.html"style="color:white;"><i class="fa-solid fa-cart-shopping"></i> Order</a></li>
+        </ul>
+        <div class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#ser"><i class="fa-solid fa-cheese"></i> Services</li>
+                <li><a href="form.html"><i class="fa-solid fa-cart-shopping"></i> Order</a></li>
+        </div>
+    </nav>
+
+    <main>
+        <div class="left">
+            <i class="fa-solid fa-fire"></i> Beta Version</i>
+            <h1>Welcome to अनवरत कृषि सहकारी संस्था लि.</h1>
+            <p>We offer various dairy products, seeds, and fertilizers at affordable prices. You can pre-order by visiting
+                the order section in the menu.</p>
+        </div>
+        <div class="image">
+            <img src="https://simplyfresh.info/wp-content/uploads/2015/09/simply-handlingdairy.jpg" alt="Dairy Products">
+        </div>
+    </main>
+
+    <center><h1 id="ser">Our Services</h1><hr><br></center>
+    <div class="box-container">
+        <div class="box">
+            <h3>Seeds</h3>
+            <p>Book various types of seeds for your farming needs.</p>
+            <a href="form.html"><button>BOOK NOW</button></a>
+        </div>
+        <div class="box">
+            <h3>Fertilizers</h3>
+            <p>Get high-quality fertilizers to boost your yield.</p>
+            <a href="form.html"><button>BOOK NOW</button></a>
+        </div>
+        <div class="box">
+            <h3>Dairy Products</h3>
+            <p>Fresh dairy products available at reasonable prices.</p>
+            <a href="form.html"><button>BOOK NOW</button></a>
+        </div>
+    </div>
+
+  <!---->  <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+    <footer>
+        <div class="container footer-content">
+            <p>© 2024 Agriculture Cooperative. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100086281730063"><i class="fab fa-facebook-f"></i></a>
+                
+            </div>
+        </div>
+</footer>
+</body>
+
+</html>
